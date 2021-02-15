@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3 style= "background-color:{{thecolour}}">Team Information</h3>
+
+<div id=rightside>
+    <img src="#crest">             <!-- Insert image url in this line -->
+</div>
+
+        <div id="team detail">
+            <div id="team team_name"> Name: {{ team.team_name }}</div>
+            <div id="team team_country"> Country: {{ team.team_country }}</div>
+            <div id="team colour"> Home Colour: {{ team.home_colour }}</div>
+        </div>
+
+{% endblock %}

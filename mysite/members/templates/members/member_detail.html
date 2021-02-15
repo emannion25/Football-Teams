@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3>Member Information</h3>
+        <div id="member detail">
+            <div id="member first"> First Name: {{ member.first_name }}</div>
+            <div id="member last"> Last Name: {{ member.last_name }}</div>
+            <div id="member dob"> DOB: {{ member.date_of_birth }}</div>
+            <div id="member update"><a href="{%url 'member_update' member_id=member.id %}">Update Details</a></div>
+        </div>
+
+{% endblock %}

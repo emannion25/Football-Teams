@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Member List</h2>
+        <div id="member detail">
+            <ul>
+            {% for member in member_list %}
+                <li><a href="{%url 'member_profile' member_id=member.id %}">{{ member.first_name }}</a></li>
+            {% endfor %}
+            </ul>
+            <h4>Click on a member for more information.</h4>
+{% endblock %}

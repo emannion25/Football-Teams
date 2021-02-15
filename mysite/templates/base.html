@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'mycss.css' %}"/>
+</head>
+    
+    <body>
+        <div id="nav">
+            <ul>
+                  <li><a href="{%url 'home' %}">Home</a></li>
+                  <li><a href="{%url 'team_list' %}">Team List</a></li>
+                  <li><a href="{%url 'member_list' %}">Member List</a></li>
+                  <li style= "float: right"><a href="{%url 'logout' %}">Logout</a></li>
+                  <li style="float:right"><a href="{%url 'login' %}?next={%url 'home' %}">Login</a></li>
+
+            </ul>
+        </div>
+        <div id="content">
+            {% block content %}
+            Placeholder content
+            {% endblock %}
+        </div>
+    </body>
+</html>
